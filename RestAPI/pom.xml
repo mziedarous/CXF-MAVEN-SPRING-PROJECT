@@ -103,12 +103,12 @@
 			<version>1.9.0</version>
 		</dependency>
 		<dependency>
-    <groupId>org.codehaus.jackson</groupId>
-    <artifactId>jackson-xc</artifactId>
-    <version>1.9.13</version>
-</dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-xc</artifactId>
+			<version>1.9.13</version>
+		</dependency>
 	</dependencies>
-
+	<!-- war Plugin -->
 	<build>
 		<plugins>
 			<plugin>
