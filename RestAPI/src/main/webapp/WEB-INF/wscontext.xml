@@ -7,12 +7,14 @@
 	<bean id="serviceBean" class="com.arous.restapi.ws.product.impl.ProductWsImpl">
 		<property name="dao" ref="productDao" />
 	</bean>
+	<bean id="jacksonProvider" class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider" />
+	<!-- cxf injections -->
 	<jaxrs:server id="productService" address="/productService">
 		<jaxrs:serviceBeans>
 			<ref bean="serviceBean" />
 		</jaxrs:serviceBeans>
 		<jaxrs:providers>
-			<bean class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider" />
+			<ref bean="jacksonProvider" />
 		</jaxrs:providers>
 	</jaxrs:server>
 
